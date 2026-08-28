@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools==83.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yande-sync"
+version = "0.1.0"
+description = "Security-focused incremental yande.re downloader"
+requires-python = ">=3.13"
+dependencies = ["requests==2.34.2"]
+readme = "README.md"
+
+[project.scripts]
+yande-sync = "yande_sync.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+yande_sync = ["config.example.toml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
