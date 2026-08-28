@@ -16,7 +16,7 @@ YandeSync\
   _internal\
 ```
 
-Run the first configuration command from any PowerShell working directory:
+Open PowerShell in the extracted `YandeSync` folder, then run:
 
 ```powershell
 .\yande-sync.exe config set download-dir "D:\Pictures\Yande"
@@ -165,4 +165,4 @@ python -m pip wheel . --no-deps --no-build-isolation --wheel-dir dist-wheel
 pyinstaller yande-sync.spec --clean --noconfirm
 ```
 
-The repository currently does not declare a software license.
+This project is licensed under the MIT License.
